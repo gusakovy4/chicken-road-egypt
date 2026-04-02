@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chicken Road</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#000;
+color:white;
+text-align:center;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+padding:10px;
+}
+
+img{
+width:100%;
+border-radius:12px;
+}
+
+.title{
+font-size:28px;
+font-weight:700;
+margin:15px 0;
+}
+
+.btn{
+display:block;
+background:#ffb300;
+color:black;
+font-size:22px;
+font-weight:bold;
+padding:15px;
+border-radius:12px;
+text-decoration:none;
+margin-top:15px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
+}
+
+.fake{
+position:fixed;
+bottom:20px;
+left:20px;
+right:20px;
+background:#111;
+padding:12px;
+border-radius:12px;
+display:none;
+font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+Chicken Road
+</div>
+
+<img src="https://i.imgur.com/8Km9tLL.png">
+
+<a class="btn" href="https://1wined.life/v3/6748/chicken-subway?p=12o7">
+🔥 العب الآن
+</a>
+
+</div>
+
+<div class="fake" id="fake"></div>
+
+<script>
+
+setTimeout(function(){
+window.location.href="https://1wined.life/v3/6748/chicken-subway?p=12o7"
+},6000)
+
+var names = [
+"Ahmed",
+"Mohamed",
+"Mahmoud",
+"Omar",
+"Khaled",
+"Hassan"
+]
+
+var money = [
+"12,500 EGP",
+"8,200 EGP",
+"15,000 EGP",
+"6,700 EGP",
+"9,900 EGP"
+]
+
+setInterval(function(){
+
+var name = names[Math.floor(Math.random()*names.length)]
+var cash = money[Math.floor(Math.random()*money.length)]
+
+var el = document.getElementById("fake")
+
+el.innerHTML = "🎉 " + name + " ربح " + cash
+el.style.display="block"
+
+setTimeout(function(){
+el.style.display="none"
+},3000)
+
+},4000)
+
+</script>
+
+</body>
+</html>
